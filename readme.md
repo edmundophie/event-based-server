@@ -5,7 +5,7 @@
 	 $ make
 	 $ sudo make install```
 2. Run makefile 
-     ```make```
+     `make`
 3. Server is now running.  
 Open your browser and go to `http://localhost:8080/[FILE_NAME.html]` 
 
