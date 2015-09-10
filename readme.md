@@ -2,9 +2,9 @@
 1. [Download](http://sourceforge.net/projects/levent/files/libevent/libevent-2.1/libevent-2.1.5-beta.tar.gz/download)
 2. Install libevent  
      ```
-     $ ./configure
-     $ make
-     $ sudo make install
+     $ ./configure   
+     $ make    
+     $ sudo make install   
      ```
 2. Run makefile 
      ```
