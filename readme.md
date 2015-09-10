@@ -18,3 +18,7 @@ Open your browser and go to `http://localhost:8080/[FILE_NAME.html]`
 1. The default html directory is in `html` folder  
 2. The default port is `8080`
 3. The `html_folder` and `port` can be changed in the `server.config` file
+
+## Team Member
+* Edmund (13512095)
+* Kevin (13512097)
