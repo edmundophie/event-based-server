@@ -8,14 +8,14 @@
      $ sudo make install   
      ```
      
-2. Run makefile 
+2. Run makefile in terminal
      ```
-     make
+     $ make
      ```
 3. Server is now running.  
 Open your browser and go to `http://localhost:8080/[FILE_NAME.html]` 
 
 ## Configuring
-1. The default html directory is in `html` folder.  
+1. The default html directory is in `html` folder  
 2. The default port is `8080`
 3. The `html folder` and `port` can be changed in the `server.config` file
