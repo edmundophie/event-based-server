@@ -3,7 +3,9 @@
 2. Install libevent  
      ```
      $ ./configure  
+     
      $ make  
+     
      $ sudo make install
      ```
 2. Run makefile 
