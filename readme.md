@@ -15,6 +15,13 @@ In the future, this html directory should be able to be changed from a configura
 For now just use port 8080 instead.
 3. This program still need really much improvement.
 
+## Autoconf
+
+     $ ./configure
+     $ make
+     $ make verify   # (optional)
+     $ sudo make install
+     
 ## Reference
 1. https://www.ruilog.com/notebook/view/6dff2291fe2e.html
 2. https://github.com/libevent/libevent/blob/master/sample/http-server.c
