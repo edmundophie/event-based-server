@@ -17,11 +17,11 @@ For now just use port 8080 instead.
 
 ## Autoconf
 
-     $ ./configure
+     g++ -o tes main.cpp -levent
      $ make
      $ make verify   # (optional)
      $ sudo make install
-     
+
 ## Reference
 1. https://www.ruilog.com/notebook/view/6dff2291fe2e.html
 2. https://github.com/libevent/libevent/blob/master/sample/http-server.c
