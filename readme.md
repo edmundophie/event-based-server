@@ -8,6 +8,7 @@
      $ sudo make install   
      ```
 3. Run makefile in terminal
+
      ```
      $ make
      ```
