@@ -12,7 +12,12 @@
 
 #include <event.h>
 #include <evhttp.h>
+#include <fstream>
 using namespace std;
+
+
+int port=8080;
+string html_dir="html/";
 
 void generic_handler(struct evhttp_request *req, void *arg)
 {
@@ -22,7 +27,6 @@ void generic_handler(struct evhttp_request *req, void *arg)
     const char *path;
     struct stat st;
     int fd = -1;
-    string html_dir = "html";
     const char* filepath;
 
     decoded = evhttp_uri_parse(uri);
@@ -37,10 +41,10 @@ void generic_handler(struct evhttp_request *req, void *arg)
     
     if (!path) path = "/";
     if(strcmp(path, "/")==0) { 
-        filepath = (html_dir + "/index.html").c_str();
+        filepath = (html_dir + "index.html").c_str();
     } else {
         string temp = path;
-        temp = html_dir + "/" + temp.substr(1, strlen(path)-1);
+        temp = html_dir + temp.substr(1, strlen(path)-1);
         filepath = temp.c_str();
     }
 
@@ -74,12 +78,29 @@ void generic_handler(struct evhttp_request *req, void *arg)
 
 int main(int argc, char **argv)
 {
+	ifstream myfile ("server.config");
+	string line;
+	if (myfile.is_open())
+	{
+		while ( getline (myfile,line) )
+		{
+		  if(line.substr(0,4)=="port") 
+		  	port=stoi(line.substr(5, line.length()-5));
+		  if(line.substr(0,11)=="html folder") 
+		  	html_dir=line.substr(12, line.length()-12);
+		}
+		myfile.close();
+	}
+
+	cout << "port: " << port << endl;
+	cout << "html_dir: " << html_dir << endl;
+
     struct evhttp *httpd;
     struct event_base *base;
     
     event_init();
     
-    httpd = evhttp_start("127.0.0.1", 8080);
+    httpd = evhttp_start("127.0.0.1", port);
 
     /* Set a callback for requests to "/specific". */
     /* evhttp_set_cb(httpd, "/specific", another_handler, NULL); */
