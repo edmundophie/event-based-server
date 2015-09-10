@@ -2,7 +2,7 @@
 1. [Install](https://github.com/libevent/libevent) libevent on your machine.
 2. Compile `main.cpp`  
 
-      g++ -o tes main.cpp -levent
+     g++ -o tes main.cpp -levent
 
 3. Run `./tes`
 4. Open your browser and head to `http://localhost:8080/[FILE_NAME.html]` 
