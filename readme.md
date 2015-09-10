@@ -1,7 +1,6 @@
 ## How to run
 1. Download libevent from [here](http://sourceforge.net/projects/levent/files/libevent/libevent-2.1/libevent-2.1.5-beta.tar.gz/download)
 2. Install libevent  
-
      ```
      $ ./configure   
      $ make    
