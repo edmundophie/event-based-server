@@ -1,13 +1,13 @@
 ## How to run
 1. Download libevent from [here](http://sourceforge.net/projects/levent/files/libevent/libevent-2.1/libevent-2.1.5-beta.tar.gz/download)
-2. Install libevent  
+2. Install libevent:  
 
      ```
      $ ./configure   
      $ make    
      $ sudo make install   
      ```
-3. Run makefile in terminal
+3. To build and run the server, run makefile in terminal:
 
      ```
      $ make
